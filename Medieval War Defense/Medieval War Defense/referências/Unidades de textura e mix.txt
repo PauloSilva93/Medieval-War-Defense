@@ -1,0 +1,79 @@
+*** Unidades de textura ***
+
+Você provavelmente se perguntou por que a variável sampler2D é um uniform se nós nem mesmo atribuimos algum valor com
+glUniform. Usando glUniform1i nós podemos de fato atribuir um valor de localização para o sampler de textura para que nós
+configuremos multiplas texturas de uma vez em um fragment shader. Esta localização de textura é mais conhecida por texture unit
+(unidade de textura). A unidade de textura padrão para uma textura é 0, que a unidade de textura ativa padrão, então nós não 
+precisamos atribuir uma localização na seção anterior; note que nem todos os drivers grágicos atribuem uma unidade de textura
+padrão, então a seção anterior poderia não ser renderizada.
+O principal propósito de unidades de textura é permitir que usemos mais de 1 textura em nossos shaders. Ao atribuir unidades
+de textura para os samplers, podemos ligar múltiplas texturas de uma vez, contanto que ativemos a unidade de textura correspondente
+primeiro. Bem como glBindTexture, podemos ativar unidades de textura usando glActiveTexture e passando a unidade de textura
+que queremos usar:
+glActiveTexture(GL_TEXTURE0); // activate the texture unit first before binding texture
+glBindTexture(GL_TEXTURE_2D, texture);
+
+Após ativar a unidade de textura, uma chamada subsequente a glBindTexture irá ligar aquela textura à unidade de textura
+atualmente ativa. A unidade de textura GL_TEXTURE0 está sempre ativa por padrão, então não tivemos que ativar quaisquer unidades
+de textura no exemplo anterior ao usar glBindTexture.
+OBS: OpenGL deve ter no mínimo 16 unidades de textura para que você usar, nas quais você pode ativar usando GL_TEXTURE0 até
+GL_TEXTURE15. Elas são definidas em ordem, então poderíamos também retornar GL_TEXTURE8 via GL_TEXTURE0 + 8 por exemplo, o que
+é útil quando você tem um loop sobre várias unidades de textura.
+Nós ainda precisamos editar o fragment shader para aceitar outro sampler:
+#version 420 core
+...
+
+uniform sampler2D texture1;
+uniform sampler2D texture2;
+
+void main()
+{
+    FragColor = mix(texture(texture1, TexCoord), texture(texture2, TexCoord), 0.2);
+}
+A cor final é agora uma combinação de duas texturas. A função mix (embutida no GLSL) recebe dois valores como input e 
+linearmente interpola entre eles baseado no seu terceiro argumento. Se o terceiro valor é 0.0, ela retorna o primeiro input;
+se for 1.0, retorna o segundo valor de input. Um valor de 0.2 retornará 80% da primeira cor de input e 20% da segunda cor,
+resultando numa mistura de ambas texturas.
+Queremos agora carregar e criar outra textura; você deve estar familiarizado com os passos agora.
+Como segunda textura, vamos usar a imagem awesomeface.png:
+GLubyte *data = stbi_load("awesomeface.png", &width, &height, &nrChannels, 0);
+if (data)
+{
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+    glGenerateMipmap(GL_TEXTURE_2D);
+}
+
+Perceba que agora, carregamos uma imagem .png que inclue um canal alfa (de transparência). Isto significa que agora temos
+que especificar que os dados da imagem contem um canal alfa também, usando GL_RGBA; do contrário o OpenGL vai interpretar
+incorretamente os dados da imagem.
+Para usar a segunda textura (e a primeira), devemos alterar o processo de renderização ao ligar as duas texturas a unidade
+de textura correspondente:
+glActiveTexture(GL_TEXTURE0);
+glBindTexture(GL_TEXTURE_2D, texture1);
+glActiveTexture(GL_TEXTURE1);
+glBindTexture(GL_TEXTURE_2D, texture2);
+
+glBindVertexArray(VAO);
+glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); 
+
+Devemos também dizer ao OpenGL para qual unidade de textura cada shader sampler pertence ao configurar cada sampler usando
+glUniform1i. Temos que definir isto apenas uma vez, então podemos fazer isso antes de entrar no loop de renderização:
+ourShader.use(); // don't forget to activate the shader before setting uniforms!  
+glUniform1i(glGetUniformLocation(ourShader.ID, "texture1"), 0); // set it manually
+ourShader.setInt("texture2", 1); // or with shader class
+  
+while(...) 
+{
+    [...]
+}
+
+Ao definir os samplers via glUniform1i, nós garantimos que cada sampler uniform corresponde a unidade de textura correta.
+Você deve ter o resultado como na imagem textures_combined.png
+
+Como se pode notar, a textura está de cabeça pra baixo. Como mencionado no tutorial anterior, podemos usar a função:
+stbi_set_flip_vertically_on_load(true) para contornar esse problema, e então teremos a imagem vista em: textures_combined2.png
+
+Porém, ainda há alguns ajustes a serem feitos para que a transparência esteja correta, veja mais informações no arquivo shader.fs
+
+E para mais informações que ajudam a entender a função mix(), veja o site:
+http://www.laurenscorijn.com/articles/colormath-basics

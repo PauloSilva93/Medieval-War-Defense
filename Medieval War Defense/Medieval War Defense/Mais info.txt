@@ -1,0 +1,65 @@
+*** TRANSPARÊNCIA EM OBJETOS SEPARADOS ***
+
+Neste programa desenhamos 2 objetos VAO separados pra cada textura, que são o background e a animação.
+Queremos a animação obviamente na frente do background, e há duas formas de se fazer isso:
+
+1. Esta exige que os objetos sejam desenhados em ordem, ou seja, o fundo primeiro e animação depois, e consiste apenas em habilitar
+a função GL_BLEND:
+glEnable(GL_BLEND);
+glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+Então, supondo que square1 seja nosso objeto de fundo, e square2 nosso objeto desenhado sobre square1. A cor resultante será:
+
+square2_colour * square2_alpha + square1_colour * (1.0 - square2_alpha)
+
+Ou seja, suponhamos que square1 = (1.0, 0.0, 0.0, 1.0) e square2 = (0.0, 1.0, 0.0, 0.5), então:
+
+(0.0, 1.0, 0.0) * 0.5 + (1.0, 0.0, 0.0) * (1.0 - 0.5) 
+= (0.0, 0.5, 0.0) + (1.0, 0.0, 0.0) * 0.5 
+= (0.0, 0.5, 0.0) + (0.5, 0.0, 0.0)
+= (0.5, 0.5, 0.0)
+
+2. Esta não exige que os objetos sejam desenhados em ordem, pois a ordem de desenho é controlada por depth testing:
+Ativamos a função de depth test:
+glEnable(GL_DEPTH_TEST);
+
+E no fragment shader descartamos os fragmentos cujo alfa seja menor que um limite específico, por ex. 0.5:
+if(square2.a < 0.5f) 
+        discard;
+
+Depth testing usa o valor Z de cada vértice. Quando chamamos a função glEnable(GL_DEPTH_TEST), definimos o depth buffer para 1.0.
+A cada fragmento, o valor z é comparado com o depth buffer da seguinte forma:
+if (fragmentDepthBuffer < depthBuffer) depthBuffer = fragmentDepthBuffer
+Ou seja, quando o buffer de profundidade do fragmento for menor que o buffer de profundidade atual naquele pixel, este pixel se torna
+o atual a ser renderizado, a não ser que um outro fragmento tenha um buffer de profundidade menor. Na prática, vértices com valor z
+menor estão mais "próximos da câmera". 
+Sim, aprendemos que o OpenGL é um sistema de mão direita, porém isso é um sistema de mão esquerda certo? 
+O NDC é um sistema de mão esquerda, e as coordenadas que passamos nos vértices GERALMENTE já estão em NDC, e quando elas são passadas
+direto pro vertex shader, elas seguem essa regra "vértices com valor z menor estão mais "próximos da câmera"".
+
+Em muitos tutoriais, vemos ver o inverso, onde coordenadas z menores estão mais longe da câmera, isso acontece por causa da matriz de
+projeção que geralmente inverte a mão do sistema. Por exemplo, a projeção:
+projection = glm::ortho(-1.0f, 1.0f, -1.0f, 1.0f, 0.0f, 1.0f);	
+
+quando multiplicada pela posição do vértice vai inverter o sistema de mão para o sistema direito.
+Neste caso, os vértices são especificados entre 0 e -1, e quanto mais próximo de 0 for o valor de z, mais próximo da tela o objeto está.
+
+*** Vantagens e desvantagens ***
+
+Vantagens da técnica 1:
+1. A qualidade do blending é perfeita (a textura por cima se mescla de forma correta).
+2. Não nos preocupamos com o z de cada vértice.
+
+Desvantagens da técnica 1:
+1. Os desenhos PRECISAM ser feitos em ordem
+
+Vantagens da técnica 2:
+1. Os desenhos não precisam ser feitos em ordem
+
+Desvantagens da técnica 2:
+1. A qualidade do blending depende do valor estipulado em "valorLimite":
+if(square2.a < valorLimite) 
+        discard;
+Geralmente a mescla apresenta serrilhados na imagem que está por cima.
+2. Temos que definir os valores z de cada vértice corretamente.
+
