@@ -155,10 +155,10 @@ public:
 			position[2] = newPos[2];
 		}	
 
-		if (position[0] <= (-1.0f - anim_size_walk[0]) || position[0] >= (1.0f + anim_size_walk[0])) this->outward = true;
-		if (position[1] <= (-1.0f - anim_size_walk[1]) || position[1] >= (1.0f + anim_size_walk[1])) this->outward = true;
+		if (position[0] <= (-1.0f - anim_size_walk[0] / 2.0f) || position[0] >= (1.0f + anim_size_walk[0] / 2.0f)) this->outward = true;
+		if (position[1] <= (-1.0f - anim_size_walk[1] / 2.0f) || position[1] >= (1.0f + anim_size_walk[1] / 2.0f)) this->outward = true;
 
-		if (renderTime / mu.CompDistance(initPos, target->position) >= 1.0 && !outward)
+		if (renderTime / mu.CompDistance(initPos, target->position) >= 1.0f && !outward)
 		{
 			renderTime = 0.0f;
 			initPos[0] = target->position[0];
@@ -220,7 +220,6 @@ public:
 		}
 		else
 		{
-			cout << gameObjects->size() << endl;
 			for (int i = 0; i < gameObjects->size(); i++)
 			{
 				if (gameObjects->at(i)->internalObjID == this->internalObjID)
@@ -1343,11 +1342,11 @@ int main(int argc, char** argv) {
 
 	TimeStep skeletonTime;
 	float skeletonTimer = 0.0f;
-	const int totalSkeletons = 800;
+	const int totalSkeletons = 1000;
 	Skeleton *skeletons = new Skeleton[totalSkeletons];
 	TimeStep skeletonReleaseTime;
 	float skeletonReleaseTimer = 0.0f;
-	float skeletonReleaseSeconds = 1.0f;
+	float skeletonReleaseSeconds = 0.0f;
 	int totalAliveSkeletons = 0;
 	int skeletonsIterator = 0;
 	TimeStep skeletonVoiceTime;
@@ -1355,11 +1354,11 @@ int main(int argc, char** argv) {
 
 	TimeStep ogreTime;
 	float ogreTimer = 0.0f;
-	const int totalOgres = 800;
+	const int totalOgres = 1000;
 	Ogre *ogres = new Ogre[totalOgres];
 	TimeStep ogreReleaseTime;
 	float ogreReleaseTimer = 0.0f;
-	float ogreReleaseSeconds = 10.0f;
+	float ogreReleaseSeconds = 0.0f;
 	int totalAliveOgres = 0;
 	int ogresIterator = 0;
 
@@ -1415,10 +1414,12 @@ int main(int argc, char** argv) {
 				delete[] stones_1;
 				delete[] bushes;
 				delete[] skeletons;
+				delete[] ogres;
 
 				player.CreatePlayer();
 				skeletonTimer = 0.0f;
 				skeletonReleaseSeconds = 1.0f;
+				ogreTimer = 0.0f;
 				ogreReleaseSeconds = 10.0f;
 
 				mainTheme.ResetMusic();
@@ -1435,6 +1436,8 @@ int main(int argc, char** argv) {
 				totalArcherTowers = 0;
 				totalAliveSkeletons = 0;
 				skeletonsIterator = 0;
+				totalAliveOgres = 0;
+				ogresIterator = 0;
 				outwardEnemies = 0;
 				totalOutwardEnemies = 0;
 
@@ -1587,7 +1590,7 @@ int main(int argc, char** argv) {
 			if (ogreTimer > 10.0f)
 			{
 				if (ogreReleaseSeconds > 10.0f)
-					ogreReleaseSeconds -= 0.1f;
+				ogreReleaseSeconds -= 0.1f;
 				ogreTimer = 0.0f;
 			}
 
@@ -1722,10 +1725,6 @@ int main(int argc, char** argv) {
 		leftMousePressed = false;
 		rightMousePressed = false;
 
-		window.ProcessInput(SDL_SCANCODE_UP, &viewY, viewY + 0.005f);
-		window.ProcessInput(SDL_SCANCODE_DOWN, &viewY, viewY - 0.005f);
-		window.ProcessInput(SDL_SCANCODE_RIGHT, &viewX, viewX + 0.005f);
-		window.ProcessInput(SDL_SCANCODE_LEFT, &viewX, viewX - 0.005f);
 		window.ProcessInput(SDL_SCANCODE_ESCAPE, &inMenu, true);
 		window.ProcessInput(SDL_SCANCODE_ESCAPE, &firstLoad, true);
 		window.ProcessInput(SDL_SCANCODE_ESCAPE, &inCredits, false);

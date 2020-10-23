@@ -10,10 +10,12 @@ Node::Node () : vertices () {
 }
 
 std::shared_ptr<Node> Node::NextTarget () {
-	if (this -> vertices.size () > 0)
-		return this -> vertices [rand() % this -> vertices.size ()];
-	else
+	if (this->vertices.size() > 0) {
+		return this->vertices[rand() % this->vertices.size()];
+	}
+	else {
 		return nullptr;
+	}
 }
 
 Graph::Graph () : mapPath () { // Iniciando Floresta Vazia
@@ -22,9 +24,13 @@ Graph::Graph () : mapPath () { // Iniciando Floresta Vazia
 
 std::shared_ptr<Node> Graph::genRandInit () {
 
-	if (this->mapPath->vertices.size() > 0) return this->mapPath->vertices[rand() % this->mapPath->vertices.size()];
-	else
+	if (this->mapPath->vertices.size() > 0) {
+		int index = rand() % this->mapPath->vertices.size();
+		return this->mapPath->vertices[index];
+	}
+	else {
 		return nullptr;
+	}
 }
 
 void Graph::loadMap1() {
@@ -35,9 +41,9 @@ void Graph::loadMap1() {
 	// Criando init1
     std::shared_ptr<Node> init1 = std::make_shared<Node>();
     this ->mapPath-> vertices.push_back(init1);
-    init1 -> position[0] = mu.GenRandFloat(-1.0, -0.9);
+    init1 ->position[0] = mu.GenRandFloat(-1.0, -0.9);
     init1 ->position[1] = mu.GenRandFloat(0.0, 0.2);
-	init1->position[2] = ((1.0f - init1->position[1]) / 2.0f);
+	init1 ->position[2] = ((1.0f - init1->position[1]) / 2.0f);
 
     // Criando init2
 	std::shared_ptr<Node> init2 = std::make_shared<Node>();
