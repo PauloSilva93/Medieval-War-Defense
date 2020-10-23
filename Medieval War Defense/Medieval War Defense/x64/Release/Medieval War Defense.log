@@ -1,0 +1,180 @@
+﻿  FireEffects.cpp
+  GameObject.cpp
+  Graph.cpp
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Graph.cpp(38,54): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Graph.cpp(39,51): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Graph.cpp(45,52): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Graph.cpp(46,53): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Graph.cpp(52,48): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Graph.cpp(53,47): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Graph.cpp(65,51): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Graph.cpp(66,50): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Graph.cpp(76,50): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Graph.cpp(77,50): warning C4305: 'argument': truncation from 'double' to 'float'
+  Light.cpp
+  LightSystem.cpp
+  MathUtils.cpp
+  Music.cpp
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Music.cpp(34,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Object2D_Animated.cpp
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Object2D_Animated.cpp(31,14): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Object2D_Animated.cpp(51,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Object2D_Animated.cpp(58,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Object2D_Animated.cpp(125,53): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Object2D_Interface.cpp
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Object2D_Interface.cpp(31,53): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Object2D_Static.cpp
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Object2D_Static.cpp(35,53): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Particle.cpp
+  ParticleEmitter.cpp
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\ParticleEmitter.cpp(61,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\ParticleEmitter.cpp(84,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\ParticleEmitter.cpp(103,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\ParticleEmitter.cpp(114,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\ParticleEmitter.cpp(127,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\ParticleEmitter.cpp(184,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\MathUtils.h(41,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\ParticleEmitter.cpp(54): message : see reference to function template instantiation 'T MathUtils::ChooseRandom<std::array<float,2>>(std::vector<std::array<float,2>,std::allocator<std::array<float,2>>>)' being compiled
+          with
+          [
+              T=std::array<float,2>
+          ]
+  PoisonEffects.cpp
+  ProjectileEffects.cpp
+  SDLWindow.cpp
+  Selection.cpp
+  Shader.cpp
+  Sorter.cpp
+  Sound.cpp
+  Source.cpp
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(115,100): warning C4244: 'argument': conversion from 'float' to 'const int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(115,85): warning C4244: 'argument': conversion from 'float' to 'const int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(115,70): warning C4244: 'argument': conversion from 'float' to 'const int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(117,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(118,96): warning C4244: 'argument': conversion from 'float' to 'const int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(118,82): warning C4244: 'argument': conversion from 'float' to 'const int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(118,68): warning C4244: 'argument': conversion from 'float' to 'const int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(208,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(229,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(437,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(559,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(563,1): warning C4305: '=': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(675,42): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(690,44): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(691,48): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(856,54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(857,54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1081,39): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1082,36): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1089,102): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1218,38): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1219,38): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1222,55): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1230,52): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1237,35): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1255,40): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1267,4611): warning C4305: 'initializing': truncation from 'double' to '_Ty'
+          with
+          [
+              _Ty=float
+          ]
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1270,46): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1277,43): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1289,5071): warning C4305: 'initializing': truncation from 'double' to '_Ty'
+          with
+          [
+              _Ty=float
+          ]
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1292,60): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1305,49): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1312,42): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1315,43): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1321,3861): warning C4305: 'initializing': truncation from 'double' to '_Ty'
+          with
+          [
+              _Ty=float
+          ]
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1324,59): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1337,50): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1375,45): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1376,42): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1377,44): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1378,41): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1388,44): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1435,200): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1602,53): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1602,86): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1607,51): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1607,81): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1615,89): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1617,55): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1617,88): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1620,53): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1627,55): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1627,86): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1630,52): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1635,52): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1635,81): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1638,51): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1715,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1730,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1763,59): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1782,133): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1782,94): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1782,67): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1784,130): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1784,91): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1784,66): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\MathUtils.h(41,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(207): message : see reference to function template instantiation 'T *MathUtils::ChooseRandom<Sound*>(std::vector<Sound *,std::allocator<Sound *>>)' being compiled
+          with
+          [
+              T=Sound *
+          ]
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\LightSystem.h(22,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1698): message : see reference to function template instantiation 'void LightSystem::DrawLights<Shader,2>(T (&)[2])' being compiled
+          with
+          [
+              T=Shader
+          ]
+  Compiling...
+  stb_image.cpp
+  Text.cpp
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Text.cpp(62,24): warning C4838: conversion from 'FT_Pos' to 'GLuint' requires a narrowing conversion
+  Texture.cpp
+  TimeStep.cpp
+  Transform.cpp
+  Vertices.cpp
+  glad.c
+Music.obj : error LNK2001: unresolved external symbol Mix_VolumeMusic
+Music.obj : error LNK2001: unresolved external symbol Mix_OpenAudio
+Music.obj : error LNK2001: unresolved external symbol SDL_GetError
+Music.obj : error LNK2001: unresolved external symbol Mix_PauseMusic
+Music.obj : error LNK2001: unresolved external symbol Mix_ResumeMusic
+Music.obj : error LNK2001: unresolved external symbol Mix_PausedMusic
+Music.obj : error LNK2001: unresolved external symbol Mix_LoadMUS
+Music.obj : error LNK2001: unresolved external symbol Mix_PlayMusic
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_GL_SwapWindow
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_Init
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_GL_GetProcAddress
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_GL_CreateContext
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_PollEvent
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_GL_SetSwapInterval
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_CreateWindow
+Sound.obj : error LNK2001: unresolved external symbol Mix_VolumeChunk
+Sound.obj : error LNK2001: unresolved external symbol Mix_PlayChannelTimed
+Sound.obj : error LNK2001: unresolved external symbol SDL_RWFromFile
+Sound.obj : error LNK2001: unresolved external symbol Mix_LoadWAV_RW
+Source.obj : error LNK2001: unresolved external symbol SDL_GetKeyboardState
+Source.obj : error LNK2001: unresolved external symbol Mix_Quit
+Source.obj : error LNK2001: unresolved external symbol SDL_Quit
+Source.obj : error LNK2001: unresolved external symbol SDL_GetMouseState
+Text.obj : error LNK2001: unresolved external symbol FT_New_Face
+Text.obj : error LNK2001: unresolved external symbol FT_Done_FreeType
+Text.obj : error LNK2001: unresolved external symbol FT_Done_Face
+Text.obj : error LNK2001: unresolved external symbol FT_Init_FreeType
+Text.obj : error LNK2001: unresolved external symbol FT_Load_Char
+Text.obj : error LNK2001: unresolved external symbol FT_Set_Pixel_Sizes
+TimeStep.obj : error LNK2001: unresolved external symbol SDL_GetTicks
+MSVCRT.lib(exe_main.obj) : error LNK2001: unresolved external symbol main
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\x64\Release\Medieval War Defense.exe : fatal error LNK1120: 31 unresolved externals
