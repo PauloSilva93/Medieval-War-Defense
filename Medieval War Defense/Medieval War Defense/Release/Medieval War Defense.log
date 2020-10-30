@@ -27,9 +27,9 @@ D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defe
 D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1221,55): warning C4305: 'initializing': truncation from 'double' to 'float'
 D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1229,52): warning C4305: 'initializing': truncation from 'double' to 'float'
 D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1236,35): warning C4305: 'initializing': truncation from 'double' to 'float'
-D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1254,42): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1254,40): warning C4305: 'initializing': truncation from 'double' to 'float'
 D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1257,43): warning C4305: 'initializing': truncation from 'double' to 'float'
-D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1263,3861): warning C4305: 'initializing': truncation from 'double' to '_Ty'
+D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(1263,4569): warning C4305: 'initializing': truncation from 'double' to '_Ty'
           with
           [
               _Ty=float
