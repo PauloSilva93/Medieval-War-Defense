@@ -21,10 +21,11 @@ class Text
 {
 public:
 	std::map<GLchar, Character> Characters;
-	GLuint VAO, VBO;
-	SDLWindow *window;
-	MathUtils mu;
-	Shader *shader_Text;
+	GLuint VAO = 0;
+	GLuint VBO = 0;
+	SDLWindow *window = nullptr;
+	MathUtils mu = {};
+	Shader *shader_Text = nullptr;
 	void CreateText(Shader *shader_Text, SDLWindow *window, const char* ttfPath);
 
 	void RenderText(std::string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color);

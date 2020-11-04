@@ -190,7 +190,6 @@
     <ClInclude Include="Sorter.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="stb_image.h" />
-    <ClInclude Include="Test.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TimeStep.h" />

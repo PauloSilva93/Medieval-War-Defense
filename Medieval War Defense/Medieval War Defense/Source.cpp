@@ -365,22 +365,22 @@ public:
 class Tower : public GameObject
 {
 public:
-	vector<GameObject*> *gameObjects;
-	Object2D_Static tower;
-	Projectile projectile;
-	Range towerRange;
-	MathUtils mu;
-	TimeStep timeStep;
-	vector<Sound*> *towerShotSounds;
+	vector<GameObject*> *gameObjects = nullptr;
+	Object2D_Static tower = {};
+	Projectile projectile = {};
+	Range towerRange = {};
+	MathUtils mu = {};
+	TimeStep timeStep = {};
+	vector<Sound*> *towerShotSounds = nullptr;
 	int price = 0;
 	int sellValue = 0;
 	int level = 1;
 	float timer = 0.0f;
-	float viewXY[2];
+	float viewXY[2] = {0.0f, 0.0f};
 	float projectileTime = 0.0f;
-	float targetPos[3];
-	bool isInRange = isInRange;
-	int enemyTarget;
+	float targetPos[3] = {};
+	bool isInRange = false;
+	int enemyTarget = 0;
 	float size[2] = { 0.08f, 0.12f };
 	float projectileHeight = 2.0f;
 	bool targetSet = false;
@@ -788,10 +788,11 @@ public:
 		this->tower_archer_over = tower_archer_over;
 		this->archerTowers = archerTowers;
 		this->towerTextures = towerTextures;
-		this->arrow = arrow;
 		arrow.CreateProjectile(*shader_Animation, arrowTex);
 		arrow.size[0] = 0.03f;
 		arrow.size[1] = 0.008f;
+		float arrowPos[3] = { 0.0f, 0.0f, -1.0f };
+		arrow.SetPosition(arrowPos);
 		this->towerRange = towerRange;
 		towerRange.CreateRangeObject(*shader_Static_NL, towerRangeTex);
 		this->totalArcherTowers = totalArcherTowers;
@@ -1251,7 +1252,7 @@ int main(int argc, char** argv) {
 	vector<Particle> fireBasisParticles;
 	ParticleEmitter fireBasisEmitter;
 	fireBasis.CreateAnimatedObject2D(&shader_Animation_NL, fireTex, 1, 1, 0, 0);
-	float fireBasisSize[2] = { 0.03, 0.03 };
+	float fireBasisSize[2] = { 0.03f, 0.03f };
 	float fireBasisPos[3] = { 0, 0, 1 };
 	float fireBasisRot[3] = { 0, 0, 1 };
 	float fireBasisColor[4] = { 1, 0.8, 0, 1 };
