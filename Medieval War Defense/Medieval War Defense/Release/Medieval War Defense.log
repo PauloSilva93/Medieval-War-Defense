@@ -44,8 +44,8 @@ D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defe
 D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(760,91): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
 D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Medieval War Defense\Source.cpp(760,66): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
   Generating code
-  1 of 1527 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+  0 of 1527 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    8 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Medieval War Defense.vcxproj -> D:\Desktop\FATEC\2 Semestre\Programação Avançada\Atividades\Medieval War Defense\Medieval War Defense\Release\Medieval War Defense.exe
