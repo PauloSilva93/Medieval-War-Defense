@@ -604,7 +604,7 @@ int main(int argc, char** argv) {
 		}
 		else if (inCredits)
 		{
-			text.RenderText("Developers and stuff...", -0.8, 0.7, 1.5, glm::vec3(1.0, 1.0f, 0.0f));
+			text.RenderText("Developers and stuff...", -0.8, 0.7, 1.5 * window.getWindowWidth() / window.getWindowHeight(), glm::vec3(1.0, 1.0f, 0.0f));
 
 			fireBasisEmitter.ChangeColor(fireBasisChgColor, fireBasisChgColorVel);
 			fireBasisEmitter.Emit();
