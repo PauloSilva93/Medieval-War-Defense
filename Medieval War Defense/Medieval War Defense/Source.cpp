@@ -439,7 +439,9 @@ int main(int argc, char** argv) {
 	bool inMenu = true;
 	bool inCredits = false;
 	bool firstLoad = true;
+	bool menuMusicIsPlaying = false;
 	bool quit = 0;
+
 	while (quit == 0) {
 
 		glClear(GL_COLOR_BUFFER_BIT);
@@ -468,10 +470,13 @@ int main(int argc, char** argv) {
 				ogreTimer = 0.0f;
 				ogreReleaseSeconds = 10.0f;
 
-				mainTheme.ResetMusic();
-				battleMusic.ResetMusic();
 				firstBattleMusicPlay = true;
-				mainTheme.PlayAudio();
+
+				if (!menuMusicIsPlaying) {
+					mainTheme.PlayAudio();
+					menuMusicIsPlaying = true;
+				}
+
 				selector.isOver = false;
 				selector.selected = false;
 				enemies.clear();
@@ -604,7 +609,9 @@ int main(int argc, char** argv) {
 		}
 		else if (inCredits)
 		{
-			text.RenderText("Developers and stuff...", -0.8, 0.7, 0.001 * window.getWindowHeight(), glm::vec3(1.0, 1.0f, 0.0f));
+			text.RenderText("Programmer:", -0.8, 0.4, 0.001 * window.getWindowHeight(), glm::vec3(1.0, 1.0f, 0.0f));
+			text.RenderText("Music by Matthew Pablo", -0.8, -0.3, 0.001 * window.getWindowHeight(), glm::vec3(1.0, 1.0f, 0.0f));
+			text.RenderText("http://www.matthewpablo.com", -0.8, -0.5, 0.001 * window.getWindowHeight(), glm::vec3(1.0, 1.0f, 0.0f));
 
 			fireBasisEmitter.ChangeColor(fireBasisChgColor, fireBasisChgColorVel);
 			fireBasisEmitter.Emit();
@@ -613,13 +620,13 @@ int main(int argc, char** argv) {
 			fireEmitter.ChangeColor(fireChgColor, fireChgColorVel);
 			fireEmitter.ChangeSize(fireEmitterNewSize, 0.05);
 			fireEmitter.Emit();
-
 		}
 		else
 		{
 			if (firstBattleMusicPlay)
 			{
 				mainTheme.ResumeOrPauseMusic();
+				menuMusicIsPlaying = false;
 				battleMusic.PlayAudio();
 				firstBattleMusicPlay = false;
 			}
@@ -770,10 +777,6 @@ int main(int argc, char** argv) {
 		leftMousePressed = false;
 		rightMousePressed = false;
 
-		window.ProcessInput(SDL_SCANCODE_ESCAPE, &inMenu, true);
-		window.ProcessInput(SDL_SCANCODE_ESCAPE, &firstLoad, true);
-		window.ProcessInput(SDL_SCANCODE_ESCAPE, &inCredits, false);
-
 		switch (window.SDL_ManageEvent())
 		{
 		case SDL_QUIT:
@@ -813,6 +816,16 @@ int main(int argc, char** argv) {
 				//std::cout << "direito pressionado!" << std::endl;
 			}
 			break;
+
+		case SDL_KEYDOWN:
+			int keyPressed = window.getEvnt().key.keysym.sym;
+			switch (keyPressed) {
+			case SDLK_ESCAPE:
+				inMenu = true;
+				firstLoad = true;
+				inCredits = false;
+				break;
+			}
 		}
 
 		window.SDL_SwapWindow();
