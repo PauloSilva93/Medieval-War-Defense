@@ -7,6 +7,11 @@
     * Animações com sprite sheet
     * Sistema de partículas
     * Iluminação dinâmica 2D usando normal maps
+    
+* Instruções:
+   * Abrir o projeto no Visual Studio Community 2019
+   * Compilar e executar na configuração Release x86
+   
 * Imagens:
 
   ![MWD-1](https://drive.google.com/uc?export=view&id=1idnzFh1d6I3YB6OlhO5JoAUzgkxQh5r8)
