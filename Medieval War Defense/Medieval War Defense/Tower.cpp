@@ -67,8 +67,8 @@
 				glm::vec3 vm = target - am / 2.0f - pInit;
 
 				glm::vec3 v = vm * projectileTime;
-				glm::vec3 a = am * pow(projectileTime, 2);
-				glm::vec3 newPos = { pInit + vm * projectileTime + (1.0f / 2.0f) * am * pow(projectileTime, 2) };
+				glm::vec3 a = am * float(pow(projectileTime, 2));
+				glm::vec3 newPos = { pInit + vm * projectileTime + (1.0f / 2.0f) * am * float(pow(projectileTime, 2)) };
 
 				glm::vec3 vPlusA = v + a;
 				glm::vec3 versor = glm::normalize(vPlusA);
