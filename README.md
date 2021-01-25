@@ -18,8 +18,7 @@
    
 * Imagens:
 
-  ![MWD-1](https://drive.google.com/uc?export=view&id=1idnzFh1d6I3YB6OlhO5JoAUzgkxQh5r8)
-  ![MWD-2](https://drive.google.com/uc?export=view&id=10CeT0qCQ1iU0xSs3ygaJsL28ikCJu1d0)
-  ![MWD-3](https://drive.google.com/uc?export=view&id=1PyCibeJBO4XVxoHBWLWANmduocrr14vU)
-  ![MWD-4](https://drive.google.com/uc?export=view&id=1Anvo6FEhz8cekcmgCh4gIdLm7syopYir)
-  ![MWD-5](https://drive.google.com/uc?export=view&id=10bYq78E2ZmydkhPEfIeGp8wvDD3rTMzT)
+  ![MWD-1](screenshots/1.png)
+  ![MWD-2](screenshots/2.png)
+  ![MWD-3](screenshots/3.png)
+  ![MWD-4](screenshots/4.png)
